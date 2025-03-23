@@ -1,0 +1,96 @@
+/*  */
+@font-face {
+	font-family: 'ProjectSans';
+	src: url(assets/ProjectSans-Regular.woff);
+}
+@font-face {
+	font-family: 'ProjectSans-heavy';
+	src: url(assets/ProjectSans-Heavy.woff);
+}
+
+:root {
+	--bg: #E0C186;
+	--acc: #E4462C;
+	--fg: hsl(41, 27%, 17%);
+
+	--font-body: 'ProjectSans', Arial, Helvetica, sans-serif;
+	--ticket-width: 16rem;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body, 
+:is(.style > div) p, h2
+{
+	margin: 0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.generator-grid {
+	width: calc(16rem * 4 + 10rem + 6px);
+
+	background-color: var(--bg);
+	background-image: url(assets/logo.png);
+	background-size: 10rem 10rem;
+	background-repeat: repeat-y;
+	padding-left: 10rem;
+
+	grid-gap: 2px;
+	display: grid;
+	grid-template-columns: repeat(4, var(--ticket-width));
+
+}
+
+.style > div {
+	background-color: var(--acc);
+
+	font-family: var(--font-body);
+	text-align: center;
+	line-height: 1;
+	color: var(--fg);
+
+	display: grid;
+	grid-gap: 0.5rem;
+	width: var(--ticket-width);
+	padding: 0.5rem;
+
+	h2 {
+		font-weight: normal;
+		text-transform: uppercase;
+		font-family: 'ProjectSans-heavy', Arial, Helvetica, sans-serif;
+		padding: 0.15rem 0;
+	}
+
+	div {
+		padding: 0.25rem;
+
+		p {
+			font-weight: bold;
+		}
+		p:first-of-type {
+			text-transform: uppercase;
+			margin-top: 0.5rem;
+			line-height: 0;
+			color: var(--acc);
+			font-family: arial;
+			font-size: 0.8rem;
+		}
+		p:last-of-type {
+			font-size: 6rem;
+
+		}
+	}
+}
+
+.style > div > * {
+	background-color: var(--bg);
+}
+
+button {
+	font-size: 2rem;
+}
